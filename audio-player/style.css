@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  #wallpaper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(0.5em);
+    z-index: -1;
+  }
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1em;
+    box-shadow: 0 0 2em #333;
+    overflow: hidden;
+    background: #333;
+    
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+}
+
+.substrateGradient {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(23, 23, 23, 0), rgb(23, 23, 23));
+    z-index: 4;
+    bottom: 38%;
+}
+
+.substrate {
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background: rgb(23, 23, 23);
+    z-index: 4;
+    bottom: 0%;
+}
+
+#back {
+    position: absolute;
+    height: 0.7em;
+    width: 0.7em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 13%;
+    right: 10%;
+    font-size: 3em;
+    z-index: 4;
+    transition: .3s;
+}
+
+#play {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 17%;
+    left: 10%;
+    font-size: 3em;
+    z-index: 4;
+    transition: .3s;
+}
+
+#pause {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 23%;
+    left: 10%;
+    font-size: 3em;
+    z-index: 3;
+    transition: .3s;
+}
+
+#forth {
+    position: absolute;
+    height: 0.7em;
+    width: 0.7em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 27%;
+    right: 10%;
+    font-size: 3em;
+    z-index: 4;
+    transition: .3s;
+}
+
+.context {
+    position: absolute;
+    z-index: 5;
+    bottom: 19%;
+    left: 28%;
+}
+
+.song, .singer {
+    color: white;
+}
