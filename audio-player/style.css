@@ -5,6 +5,7 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
   
+  /* wallpaper */
   #wallpaper {
     position: absolute;
     height: 100%;
@@ -19,6 +20,7 @@ body {
     z-index: -1;
   }
 
+  /* player window */
 .container {
     position: absolute;
     top: 50%;
@@ -28,12 +30,10 @@ body {
     box-shadow: 0 0 2em #333;
     overflow: hidden;
     background: #333;
-    
     display: flex;
     flex-direction: column;
-    height: 70vh;
 }
-
+/* gradient for img in player window */
 .substrateGradient {
     position: absolute;
     height: 60%;
@@ -42,7 +42,7 @@ body {
     z-index: 4;
     bottom: 38%;
 }
-
+/* dark substrate for button and info */
 .substrate {
     position: absolute;
     height: 40%;
@@ -52,27 +52,29 @@ body {
     bottom: 0%;
 }
 
+/* player controls */
 #back {
     position: absolute;
     height: 0.7em;
     width: 0.7em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 13%;
-    right: 10%;
+    bottom: 8.5%;
+    left: 26%;
     font-size: 3em;
     z-index: 4;
     transition: .3s;
 }
 
+/* buttons play, pause, back and forth */
 #play {
     position: absolute;
     height: 1em;
     width: 1em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 17%;
-    left: 10%;
+    bottom: 6%;
+    left: 43%;
     font-size: 3em;
     z-index: 4;
     transition: .3s;
@@ -84,8 +86,8 @@ body {
     width: 1em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 23%;
-    left: 10%;
+    bottom: 6%;
+    left: 43%;
     font-size: 3em;
     z-index: 3;
     transition: .3s;
@@ -97,20 +99,39 @@ body {
     width: 0.7em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 27%;
-    right: 10%;
+    bottom: 8.5%;
+    right: 26%;
     font-size: 3em;
     z-index: 4;
     transition: .3s;
 }
 
+/* context about song and singer */
 .context {
     position: absolute;
     z-index: 5;
-    bottom: 19%;
-    left: 28%;
+    bottom: 28%;
+    left: 5%;
 }
 
 .song, .singer {
     color: white;
+}
+
+.song {
+    font-weight: 700;
+}
+
+/* track bar */
+#audio {
+    width: 100%;
+}
+
+#progress {
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    bottom: 20%;
+    left: 5%;
+    width: 89%;
 }
