@@ -1,0 +1,196 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #333;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  
+  /* wallpaper */
+  #wallpaper {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(0.5em);
+    z-index: -1;
+  }
+
+  /* player window */
+.container {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1em;
+    box-shadow: 0 0 2em #333;
+    overflow: hidden;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
+.cover.playing {
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+/* gradient for img in player window */
+.substrateGradient {
+    position: absolute;
+    height: 60%;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(23, 23, 23, 0), rgb(23, 23, 23));
+    z-index: 4;
+    bottom: 38%;
+}
+/* dark substrate for button and info */
+.substrate {
+    position: absolute;
+    height: 40%;
+    width: 100%;
+    background: rgb(23, 23, 23);
+    z-index: 4;
+    bottom: 0%;
+}
+
+/* player controls: play, pause, back and forth */
+#back {
+    position: absolute;
+    height: 0.7em;
+    width: 0.7em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 6.5%;
+    left: 26%;
+    font-size: 3em;
+    z-index: 4;
+    transition: .3s;
+}
+
+#play {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 4%;
+    left: 42%;
+    font-size: 3em;
+    z-index: 4;
+    transition: .3s;
+}
+
+#pause {
+    position: absolute;
+    height: 1em;
+    width: 1em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 4%;
+    left: 43%;
+    font-size: 3em;
+    z-index: 4;
+    transition: .3s;
+    display: none;
+}
+
+#forth {
+    position: absolute;
+    height: 0.7em;
+    width: 0.7em;
+    filter: invert(1);
+    cursor: pointer;
+    bottom: 6.5%;
+    right: 26%;
+    font-size: 3em;
+    z-index: 4;
+    transition: .3s;
+}
+
+/* context about song and singer */
+.context {
+    position: absolute;
+    bottom: 27%;
+    left: 6%;
+    z-index: 5;
+}
+
+.song, .singer {
+    color: white;
+}
+.singer {
+    padding-bottom: 2px;
+}
+
+.song {
+    font-weight: 700;
+}
+
+/* track bar */
+#audio {
+    width: 100%;
+}
+
+#progress {
+    position: absolute;
+    width: 100%;
+    bottom: 20%;
+    left: 5%;
+    width: 89%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/* song time */
+.time span {
+    position: absolute;
+    bottom: 17%;
+    font-size: 10px;
+    color: azure;
+    z-index: 4;
+}
+
+#currentTime {
+    left: 6%;
+}
+
+#duration {
+    right: 6%;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+}
+.github, .school {
+    padding: 10px;
+}
+
+.date {
+    color: white;
+}
+
+.footer-img {
+    filter: invert(1);
+}
