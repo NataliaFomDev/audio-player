@@ -7,31 +7,45 @@
     <title>Audio-player</title>
 </head>
 <body>
-    <div id="wallpaper" style="background-image: url('assets/img/psychosocial.jpeg');"></div>
-    <!--<img src="assets/img/dontstartnow.png" id="wallpaper">-->
-    <div class="container">
-        <div class="cover" id="cover" style="background-image: url('assets/img/psychosocial.jpeg');"></div>
-        <div class="player">
-            <div class="substrateGradient"></div>
-            <div class="substrate"></div>
-            <img src="assets/svg/backward.png" id="back">
-            <img src="assets/svg/play.png" id="play">
-            <img src="assets/svg/pause.png" id="pause">
-            <img src="assets/svg/forward.png" id="forth">
-            <div class="context">
-                <div class="singer">Slipknot</div>
-                <div class="song">Psychosocial</div>
-            </div>
-            <div class="audio-player">
-                <audio id="audio" src="assets/audio/psychosocial.mp3"></audio>
-                <input type="range" id="progress" min="0" value="0">
-            </div>
-            <div class="time">
-                <span id="currentTime">0:00</span>
-                <span id="duration">0:00</span>
+    <main>
+        <div id="wallpaper" style="background-image: url('assets/img/psychosocial.jpeg');"></div>
+        <div class="container">
+            <div class="cover" id="cover" style="background-image: url('assets/img/psychosocial.jpeg');"></div>
+            <div class="player">
+                <div class="substrateGradient"></div>
+                <div class="substrate"></div>
+                <img src="assets/svg/backward.png" id="back">
+                <img src="assets/svg/play.png" id="play">
+                <img src="assets/svg/pause.png" id="pause">
+                <img src="assets/svg/forward.png" id="forth">
+                <div class="context">
+                    <div class="singer">Slipknot</div>
+                    <div class="song">Psychosocial</div>
+                </div>
+                <div class="audio-player">
+                    <audio id="audio" src="assets/audio/psychosocial.mp3"></audio>
+                    <input type="range" id="progress" min="0" value="0">
+                </div>
+                <div class="time">
+                    <span id="currentTime">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
             </div>
         </div>
-    </div>
+    </main>
+    <footer class="footer">
+        <div class="github">
+            <a href="https://github.com/NataliaFomDev" target="_blank">
+                <img class="footer-img" src="assets/svg/github-mark.svg" width="60" height="60" alt="github-icon">
+            </a>
+        </div>
+        <div class="date">Created in 2023</div>
+        <div class="school">
+            <a href="https://rs.school/js/" target="_blank">
+                <img src="assets/svg/rs_school_js.svg" width="128" height="48" alt="RS School">
+            </a>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

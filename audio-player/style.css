@@ -43,6 +43,11 @@ body {
     z-index: 4;
 }
 
+.cover.playing {
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
 /* gradient for img in player window */
 .substrateGradient {
     position: absolute;
@@ -83,7 +88,7 @@ body {
     filter: invert(1);
     cursor: pointer;
     bottom: 4%;
-    left: 43%;
+    left: 42%;
     font-size: 3em;
     z-index: 4;
     transition: .3s;
@@ -165,4 +170,27 @@ body {
 
 #duration {
     right: 6%;
+}
+
+/* footer */
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+}
+.github, .school {
+    padding: 10px;
+}
+
+.date {
+    color: white;
+}
+
+.footer-img {
+    filter: invert(1);
 }
