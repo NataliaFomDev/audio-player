@@ -10,12 +10,9 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    object-fit: cover;
-    margin: auto;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     filter: blur(0.5em);
     z-index: -1;
   }
@@ -23,6 +20,8 @@ body {
   /* player window */
 .container {
     position: absolute;
+    width: 300px;
+    height: 400px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -33,6 +32,17 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.cover {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 4;
+}
+
 /* gradient for img in player window */
 .substrateGradient {
     position: absolute;
@@ -52,28 +62,27 @@ body {
     bottom: 0%;
 }
 
-/* player controls */
+/* player controls: play, pause, back and forth */
 #back {
     position: absolute;
     height: 0.7em;
     width: 0.7em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 8.5%;
+    bottom: 6.5%;
     left: 26%;
     font-size: 3em;
     z-index: 4;
     transition: .3s;
 }
 
-/* buttons play, pause, back and forth */
 #play {
     position: absolute;
     height: 1em;
     width: 1em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 6%;
+    bottom: 4%;
     left: 43%;
     font-size: 3em;
     z-index: 4;
@@ -86,11 +95,12 @@ body {
     width: 1em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 6%;
+    bottom: 4%;
     left: 43%;
     font-size: 3em;
-    z-index: 3;
+    z-index: 4;
     transition: .3s;
+    display: none;
 }
 
 #forth {
@@ -99,7 +109,7 @@ body {
     width: 0.7em;
     filter: invert(1);
     cursor: pointer;
-    bottom: 8.5%;
+    bottom: 6.5%;
     right: 26%;
     font-size: 3em;
     z-index: 4;
@@ -109,13 +119,16 @@ body {
 /* context about song and singer */
 .context {
     position: absolute;
+    bottom: 27%;
+    left: 6%;
     z-index: 5;
-    bottom: 28%;
-    left: 5%;
 }
 
 .song, .singer {
     color: white;
+}
+.singer {
+    padding-bottom: 2px;
 }
 
 .song {
@@ -130,8 +143,26 @@ body {
 #progress {
     position: absolute;
     width: 100%;
-    z-index: 4;
     bottom: 20%;
     left: 5%;
     width: 89%;
+    cursor: pointer;
+    z-index: 4;
+}
+
+/* song time */
+.time span {
+    position: absolute;
+    bottom: 17%;
+    font-size: 10px;
+    color: azure;
+    z-index: 4;
+}
+
+#currentTime {
+    left: 6%;
+}
+
+#duration {
+    right: 6%;
 }
