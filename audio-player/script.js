@@ -19,7 +19,7 @@ const songs = [
         title: 'Bury Me Alive',
         src: 'assets/audio/burymealive.mp3',
         singer: 'We Are The Fallen',
-        wallpaper: 'assets/img/burymealive.jpeg'
+        wallpaper: 'assets/img/BuryMeAlive.jpeg'
     },
     {
         title: 'Not Strong Enough',

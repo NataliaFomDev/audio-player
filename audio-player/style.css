@@ -41,6 +41,8 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     z-index: 4;
+    transform: scale(1);
+    transition: transform 1s;
 }
 
 .cover.playing {
@@ -101,7 +103,7 @@ body {
     filter: invert(1);
     cursor: pointer;
     bottom: 4%;
-    left: 43%;
+    left: 42%;
     font-size: 3em;
     z-index: 4;
     transition: .3s;
